@@ -3271,6 +3271,10 @@ input, select, textarea {
 			background-color: #21242f;
 		}
 
+		.wrapper.style5 {
+			background-color: #5d6686;
+		}
+
 		.wrapper.style1-alt {
 			background-color: #33363f;
 		}
@@ -3907,7 +3911,6 @@ input, select, textarea {
 
 	#intro {
 		background-attachment: fixed;
-		background-image: url("images/intro.svg");
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;

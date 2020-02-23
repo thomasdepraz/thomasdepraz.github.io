@@ -4,8 +4,8 @@ var cxt = c.getContext("2d");
 c.width = c.parentElement.offsetWidth;
 c.height = c.parentElement.offsetHeight;
 c.style.position = "absolute";
-c.style.zIndex = "0";
-
+c.style.zIndex = "1";
+c.style.opacity = "0.8"
 
 var letters = "アカサタナハマヤャラワガザダバパイキシチニヒミリヰギジヂビピウクスツヌフムユュルグズヅブプエケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン";
 letters = letters.split("");
@@ -20,8 +20,8 @@ for(var x=0 ; x < columns ; x++){ //x offset
 }
 
 function draw(){
-  cxt.fillStyle="rgba(0,0,0,0.2)"; //fade on each frame
-  cxt.fillRect(c.width,c.height,-c.width,-c.height);
+  cxt.fillStyle="rgba(0,0,0,0.3)"; //fade on each frame 
+  cxt.fillRect(0,0,c.width,c.height);
   
   cxt.fillStyle = "#3cff";//text color
   cxt.font = font_size + 'px arial';
@@ -32,7 +32,7 @@ function draw(){
     cxt.fillText(text,i*font_size,drops[i]*font_size);
     
     if(drops[i]*font_size > c.height && Math.random() > 0.975)
-      drops[i] = 0 + getRandomInt(4);
+      drops[i] = 55 + getRandomInt(7);
     
     //increment y coordinate
     drops[i]++;
