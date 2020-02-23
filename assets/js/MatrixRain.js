@@ -1,49 +1,46 @@
-﻿// Initialising the canvas
-var canvas = document.querySelector('canvas'),
-    ctx = canvas.getContext('2d');
+﻿var c = document.getElementById('c');
+var cxt = c.getContext("2d");
 
-// Setting the width and height of the canvas
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+c.width = c.parentElement.offsetWidth;
+c.height = c.parentElement.offsetHeight;
+c.style.position = "absolute";
+c.style.zIndex = "0";
 
-// Setting up the letters
-var letters = 'アカサタナハマヤャラワガザダバパイキシチニヒミリヰギジヂビピウクスツヌフムユュルグズヅブプエケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
-letters = letters.split('');
 
-// Setting up the columns
-var fontSize = 17,
-    columns = canvas.width / fontSize;
+var letters = "アカサタナハマヤャラワガザダバパイキシチニヒミリヰギジヂビピウクスツヌフムユュルグズヅブプエケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン";
+letters = letters.split("");
 
+var font_size =15;
+var columns = c.width/font_size; 
+
+var drops = [];
+
+for(var x=0 ; x < columns ; x++){ //x offset
+  drops[x]=1;
+}
+
+function draw(){
+  cxt.fillStyle="rgba(0,0,0,0.2)"; //fade on each frame
+  cxt.fillRect(c.width,c.height,-c.width,-c.height);
+  
+  cxt.fillStyle = "#3cff";//text color
+  cxt.font = font_size + 'px arial';
+  
+  
+  for(var i= 0 ; i < columns ; i++){
+    var text = letters[Math.floor(Math.random()*letters.length)];
+    cxt.fillText(text,i*font_size,drops[i]*font_size);
+    
+    if(drops[i]*font_size > c.height && Math.random() > 0.975)
+      drops[i] = 0 + getRandomInt(4);
+    
+    //increment y coordinate
+    drops[i]++;
+}
+  
+}
 //Random Method
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-
-// Setting up the drops
-var drops = [];
-for (var i = columns; i > 0 ; i--) {
-  drops[i] = 1;
-}
-
-// Setting up the draw function
-function draw() {
-  ctx.fillStyle = 'rgba(0, 0, 0, .15)';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  
-  for (var i = 0; i < drops.length; i++) {
-    //pick a random character
-    var text = letters[Math.floor(Math.random() * letters.length)];
-    
-    ctx.fillStyle = '#0f0'; //This is the text color
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-    drops[i]++;
-    
-    if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
-      drops[i] = 20 + getRandomInt(4); //loop height variations
-    }
-  }
-  
-}
-
-// Loop the animation
-setInterval(draw, 33);
+setInterval(draw,33);
