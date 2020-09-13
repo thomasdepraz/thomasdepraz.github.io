@@ -32,7 +32,7 @@ function draw(){
     cxt.fillText(text,i*font_size,drops[i]*font_size);
     
     if(drops[i]*font_size > c.height && Math.random() > 0.975)
-      drops[i] = 55 + getRandomInt(7);
+      drops[i] = c.height/20 + getRandomInt(7);
     
     //increment y coordinate
     drops[i]++;
@@ -43,4 +43,15 @@ function draw(){
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-setInterval(draw,33);
+setInterval(draw,30);
+
+
+window.onresize = function getSize(){
+  c.width = c.parentElement.offsetWidth;
+  c.height = c.parentElement.offsetHeight;
+  columns = c.width/font_size; 
+  for(var x=0 ; x < columns ; x++){ //x offset
+    drops[x]=1;
+  }
+}
+

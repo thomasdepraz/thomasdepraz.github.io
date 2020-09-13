@@ -1,5 +1,5 @@
-consoleText(['Thomas Depraz-Depland'], 'text',  ['white'])
-consoleText(['KATANA'], 'text2',  ['white'])
+consoleText(['Thomas Depraz-Depland'], 'name',  ['white'])
+
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];//set to white if undefined
