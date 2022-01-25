@@ -2571,6 +2571,7 @@ input, select, textarea {
 
 /* #region Image */
 
+
 	.image {
 		border-radius: 0.25em;
 		border: 0;
@@ -2578,9 +2579,15 @@ input, select, textarea {
 		position: relative;
 	}
 
-		.image img {
-			border-radius: 0.25em;
-			display: block;
+		.image.hoverable {
+			opacity: 1;
+			filter: blur(0px);
+			-webkit-filter: blur(0f);
+		}
+		.image.hoverable:hover{
+			opacity: 0.5;
+			filter: blur(1px);
+			-webkit-filter: blur(1f);
 		}
 
 		.image.left, .image.right {
