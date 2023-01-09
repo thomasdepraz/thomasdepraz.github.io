@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e06cd721-e17c-4623-af5e-d75ec9ce9e82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.thomasdepraz.github.io.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.thomasdepraz.github.io.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/files/CV_ENG.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/files/CV_FR.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/files/CV_Thomas Depraz-Depland.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/files/CV_Thomas Depraz-Depland.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,9 +39,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.elements.html" />
         <item itemvalue="JavaScript Debug.generic.html" />
-        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -59,6 +56,7 @@
       <workItem from="1666939483564" duration="176000" />
       <workItem from="1672762352543" duration="2644000" />
       <workItem from="1672921888857" duration="3772000" />
+      <workItem from="1673282047778" duration="474000" />
     </task>
     <servers />
   </component>
