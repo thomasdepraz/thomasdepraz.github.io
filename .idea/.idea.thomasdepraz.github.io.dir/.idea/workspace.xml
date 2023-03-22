@@ -4,6 +4,7 @@
     <list default="true" id="e06cd721-e17c-4623-af5e-d75ec9ce9e82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.thomasdepraz.github.io.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.thomasdepraz.github.io.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secretMorideth.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +58,7 @@
       <workItem from="1672762352543" duration="2644000" />
       <workItem from="1672921888857" duration="3772000" />
       <workItem from="1673282047778" duration="474000" />
+      <workItem from="1679480767106" duration="2010000" />
     </task>
     <servers />
   </component>
